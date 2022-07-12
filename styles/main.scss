@@ -1,0 +1,491 @@
+@import'./base/reset';
+@import'./base/variables';
+@import'./base/mixins';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-image: url(../images/intro.png);
+    background-position: center center;
+    background-size: cover;
+    height: 700px;
+    z-index: 1;
+    position: relative;
+}
+header::before {
+    content: "";
+    background: #ff6f21;
+    background: -webkit-linear-gradient(to left, #66570c, #ff6f21);
+    background: linear-gradient(to left, #66570c, #ff6f21);
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    opacity: 0.3;
+    z-index: 2;
+}
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+    z-index: 3;
+    position: relative;
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $main-text-color;
+}
+
+.register ul li a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $main-text-color;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 2px solid transparent;
+}
+
+.register ul li.signup a {
+    border: 2px solid $main-text-color;
+    border-radius: 40px;
+}
+
+.register ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.middleHeader {
+    margin: 154px auto 28px;
+    width: 470px;
+}
+
+.middleHeader h1 {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 63px;
+    text-align: center;
+    color: $main-text-color;
+}
+
+.middleHeader p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    color: #F7F3F2;
+    margin-bottom: 33px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.button {
+    background-color: $main-bg-color;
+    color: $main-text-color;
+    padding: 15px;
+    border-radius: 40px;
+    text-decoration: none;
+    display: block;
+    width: 187px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 auto;
+    text-align: center;
+}
+section{
+    margin-top: 95px;
+}
+section h2{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: #444444;
+    margin-bottom: 35px;
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+}
+.stepBox{
+    width:300px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: flex-end;
+    .stepBoxContent{
+        min-height:116px;
+        width:100%;
+        padding: 0 25px 21px;
+        &__button{
+            background-color: $main-bg-color;
+            border-radius: 40px;
+            padding: 5px 14px;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            letter-spacing: 2px;
+            color: $main-text-color;
+            text-decoration: none;
+            display: block;
+            width: 44px;
+        }
+        &__title{
+            color: $main-text-color;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 26px;
+            margin-top:15px;
+        }
+        &__description{
+            font-family: 'Roboto';
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #E3E3E3;
+            margin-top:25px;
+        }
+    }
+}
+.stepBox:first-child{
+    background-image: url(../images/Step\ 1.png);
+}
+.stepBox:nth-child(2){
+    background-image: url(../images/Step\ 2.png);
+}
+.stepBox:nth-child(3){
+    background-image: url(../images/Step\ 3.png);
+}
+section.partners .wrapper{
+    background-size: 12px 12px;
+    background-image:
+      linear-gradient(to right, rgba(197, 76, 76, 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(197, 76, 76, 0.2) 1px, transparent 1px);
+}
+.partnersList{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:55px;
+}
+.partnerBox{
+    width: 221px;
+    height: 205px;
+    text-align: center;
+    &__image{
+        position: relative;
+    }
+    &__image img{
+        width:120px;
+        height: 120px;
+        border-radius:50%;
+        opacity: 0.8;
+    }
+    &__name{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #444444;
+        margin: 17px auto 22px;
+    }
+    &__description{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        color:#666666;
+    }
+    &__icon img{
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        background-color: #FF4E50;
+        bottom: -5px;
+        right: 46px;
+        padding: 10px;
+        z-index: 3;
+        border-radius: 50%;
+        border: 3px solid #fff;
+    }
+    &__icon.music img{
+        background-color: #FF4E50;
+    }
+    &__icon.brush img{
+        background-color: #19D4CA;
+    }
+    &__icon.camera img{
+        background-color: #FFA710;
+    }
+    &__icon.plane img{
+        background-color: #667DF3;
+    }
+}
+.secondary-button{
+    background-color: transparent;
+    color: $main-bg-color;
+    padding: 15px;
+    border-radius: 40px;
+    text-decoration: none;
+    display: block;
+    width: 187px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 auto;
+    border: 2px solid $main-bg-color;
+    text-align: center;
+}
+.activity-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.activity-list .activity{
+    margin-bottom:20px;
+}
+.activity-list .activity{
+    height: 310px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: $main-text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        color: $main-text-color;
+        text-align: center;
+    }
+}
+.activity-list .activity:first-child{
+    @include activity-box (url(../images/Sport.png),300px);
+}
+.activity-list .activity:nth-child(2){
+    @include activity-box (url(../images/Healath.png),300px);
+}
+.activity-list .activity:nth-child(3){
+    @include activity-box (url(../images/Extreme.png),300px);
+}
+.activity-list .activity:nth-child(4){
+    @include activity-box (url(../images/Games.png),300px);
+}
+.activity-list .activity:nth-child(5){
+    @include activity-box (url(../images/Culture.png),620px);
+}
+.activity-list .activity:nth-child(6){
+    @include activity-box (url(../images/Relax.png),620px);
+}
+.activity-list .activity:nth-child(7){
+    @include activity-box (url(../images/travelling.png),300px);
+}
+form{
+    text-align: center;
+    p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 14px;
+        margin-bottom: 25px;
+        color: #666666;
+    }
+    input[type=search]{
+        padding: 14px;
+        width:299px;
+        border: 1px solid #D4D4D4;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+        border-radius: 3px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        margin-right: 10px;
+    }
+    input[type=submit]{
+        @extend .button;
+        display: inline-block;
+        border:none;
+    }
+}
+footer{
+    border-top: 2px solid $main-bg-color;
+    margin-top:100px;
+    padding: 40px 0;
+}
+.f-navigation{
+    display: flex;
+    justify-content: space-between;
+    .footerLogo{
+        color:$main-bg-color;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .title{
+        color:#444444;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom:14px;
+    }
+    ul.list li{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 26px;
+        color:#999999;
+    }
+    .designed{
+
+     p{
+        color:#cccccc;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 1px;
+     }
+     .d-logo{
+        margin-top:7px;
+        width:110px;
+        height: 24px;
+     }   
+    }
+}
+
+@media screen and (max-width: 950px){
+    .wrapper{
+        width: 768px;
+    }
+    section h2{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .stepBox{
+        width: 236px;
+    }
+    .stepBox .stepBoxContent__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 14px;
+    }
+    section.partners .wrapper {
+        background-image: none;
+        width: 492px;
+    }
+    .partnersList {
+        flex-wrap: wrap;
+    }
+    .partnerBox {
+        width: 221px;
+        height: 250px;
+        text-align: center;
+    }
+    .activity-list .activity:first-child{
+        @include activity-box (url(../images/Sport.png),236px);
+    }
+    .activity-list .activity:nth-child(2){
+        @include activity-box (url(../images/Healath.png),236px);
+    }
+    .activity-list .activity:nth-child(3){
+        @include activity-box (url(../images/Extreme.png),236px);
+    }
+    .activity-list .activity:nth-child(4){
+        @include activity-box (url(../images/Games.png),236px);
+    }
+    .activity-list .activity:nth-child(5){
+        @include activity-box (url(../images/Culture.png),502px);
+    }
+    .activity-list .activity:nth-child(6){
+        @include activity-box (url(../images/Relax.png),502px);
+    }
+    .activity-list .activity:nth-child(7){
+        @include activity-box (url(../images/travelling.png),236px);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wrapper{
+        width: 320px;
+    }
+    .topHeader {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .logo {
+        margin-top: 97px;
+    }
+    .middleHeader {
+        width: 320px;
+    }
+    .middleHeader h1 {
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .middleHeader p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .button,
+    .secondary-button {
+        width: 280px;
+    }
+    section{
+        margin-top: 35px;
+    }
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stepBox {
+        width: 300px;
+        height: 240px;
+        margin-bottom: 10px;
+    }
+    .partnersList {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 36px;
+    }
+    .activity-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .activity-list .activity{
+        width: 300px!important;
+        height: 120px;
+    }
+    form input[type=search] {
+        display: block;
+        margin-right: 0;
+        margin: 0 auto 10px;
+    }
+    .f-navigation {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .f-navigation .company{
+        margin:14px 0;
+    }
+    ul.list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    ul.list li {
+        padding: 0 10px;
+    }
+}
