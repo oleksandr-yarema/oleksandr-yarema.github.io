@@ -1,0 +1,4 @@
+@mixin activity-box($image, $size) {
+    background-image: $image;
+    width: $size;
+  }
