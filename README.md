@@ -1,1 +1,1 @@
-# oleksandr-yaremagithub.io
+# oleksandr-yarema.github.io
